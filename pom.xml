@@ -39,15 +39,6 @@
         
     </properties>
     
-   <!--  <modules>
-        <module>eht-y1da-mp</module>
-        <module>eht-y1da-wechat</module>
-        <module>eht-y1da-wechat-fast</module>
-        <module>eht-y1da-schedule</module>
-        <module>eht-y1da-schedule-fast</module>
-    </modules> -->
-
-
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -73,7 +64,9 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+    
     <modules>
     	<module>java-xinxin-main</module>
     </modules>
+    
 </project>
