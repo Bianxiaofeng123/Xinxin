@@ -22,10 +22,10 @@
 <configuration>
     <settings><setting name="callSettersOnNulls" value="true" /></settings>
     <typeAliases>
-	    <typeAlias alias="UUIDTypeHandler"          type="com.xinxin.utils.UUIDTypeHandler" />
-	    <typeAlias alias="EmptyStringIfNullHandler" type="com.xinxin.utils.EmptyStringIfNullHandler" />
-	    <typeAlias alias="EmptyTextIfNullHandler"   type="com.xinxin.utils.EmptyTextIfNullHandler" />
-	    <typeAlias alias="ZeroIfNullHandler"        type="com.xinxin.utils.ZeroIfNullHandler" />
+	    <typeAlias alias="UUIDTypeHandler"          type="com.xinxin.mybatis.utils.UUIDTypeHandler" />
+	    <typeAlias alias="EmptyStringIfNullHandler" type="com.xinxin.mybatis.utils.EmptyStringIfNullHandler" />
+	    <typeAlias alias="EmptyTextIfNullHandler"   type="com.xinxin.mybatis.utils.EmptyTextIfNullHandler" />
+	    <typeAlias alias="ZeroIfNullHandler"        type="com.xinxin.mybatis.utils.ZeroIfNullHandler" />
     </typeAliases>
 
 
