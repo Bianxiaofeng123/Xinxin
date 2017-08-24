@@ -39,10 +39,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jetty</artifactId>
 		</dependency>
-		<dependency>
+		<!-- 角色验证 -->
+		<!-- <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
+		</dependency> -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
@@ -241,6 +242,12 @@
 			<artifactId>logstash-logback-encoder</artifactId>
 			<version>4.8</version>
 		</dependency>
+		
+	    <!-- <dependency>
+	        <groupId>org.springframework.amqp</groupId>
+	        <artifactId>spring-rabbit</artifactId>
+	        <version>1.7.3.RELEASE</version>
+	    </dependency> -->
 	</dependencies>
 
 

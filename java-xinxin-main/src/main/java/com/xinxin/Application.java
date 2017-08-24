@@ -15,8 +15,7 @@ import com.xinxin.Application;
 @SpringBootApplication
 @Configuration
 //@EnableAutoConfiguration
-//自动扫描根包名为com.eht.y1da的包。
-@ComponentScan(basePackages = { "com.xinxin" }) //此处添加的不同的包名（即根包名不是com.eht.y1da）的时候，添加相应的根包名即可。
+@ComponentScan(basePackages = { "com.xinxin" }) //此处添加的不同的包名（即根包名）的时候，添加相应的根包名即可。
 @Controller
 //@EnableRedisHttpSession(maxInactiveIntervalInSeconds = 60)
 public class Application {
