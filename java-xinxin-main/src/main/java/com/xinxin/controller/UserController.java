@@ -1,6 +1,8 @@
 package com.xinxin.controller;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 import org.slf4j.Logger;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.xinxin.mybatis.utils.JsonResult;
 import com.xinxin.mybatis.utils.Pager;
+import com.xinxin.service.UserService;
 
 @RestController
 @RequestMapping(value = "/usr")
@@ -24,6 +27,8 @@ public class UserController implements Serializable{
 	@Autowired
 	MessageSource messageSource; 
 	
+	@Autowired
+	UserService userService;
     /**
 	 * 示例 ：查询用户列表
 	 * @author fengfeng
@@ -35,16 +40,18 @@ public class UserController implements Serializable{
 	public JsonResult getUserList(@RequestParam Map<String, Object> params, Pager pager) throws Exception{
 		log.info("--->>>params:"+params);
 		JsonResult jsonResult = new JsonResult();
-//		StringBuffer errMsg = new StringBuffer();
 		// 校验必填参数
-//		if (!Validation.checkBlank(params, errMsg, messageSource, "uopid", "ebid")) {
-//			jsonResult.putFailed(errMsg.toString());
-//			return jsonResult;
-//		}
+		//StringBuffer errMsg = new StringBuffer();
+		//if (!Validation.checkBlank(params, errMsg, messageSource, "uopid", "ebid")) {
+		//		jsonResult.putFailed(errMsg.toString());
+		//		return jsonResult;
+		//}
 		//获取翻页信息
 		pager.setPagerNecessary(params, pager);
-		log.info("asdsaddsdsddddddddddddddddddddddd");
 		//调用service
+		List<Map<String, Object>> userList=new ArrayList<Map<String, Object>>();
+		userList=userService.getUserList(params);
+		jsonResult.put(userList);
 		return jsonResult;
 	}
    

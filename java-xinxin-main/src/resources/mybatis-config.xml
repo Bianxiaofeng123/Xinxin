@@ -36,7 +36,7 @@
      
     <mappers>
          <!-- <package name="mapper/**.xml"/> -->
-		<!-- <mapper resource="mapper/MUTM0120Mapper.xml" /> -->
+		 <mapper resource="mapper/UserMapper.xml" /> 
 		
     </mappers>
 </configuration>  

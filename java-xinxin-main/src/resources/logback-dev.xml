@@ -29,8 +29,8 @@
         </encoder>
     </appender>
     <logger name="org.springframework.web" level="DEBUG" />
-    <logger name="com.koi.mybatis.mapper" level="TRACE"/>
-    <logger name="com.koi" level="DEBUG" />
+    <logger name="com.xinxin.mapper" level="TRACE"/>
+    <logger name="com.xinxin" level="DEBUG" />
     <root level="INFO">
         <appender-ref ref="LOGSTASH" />
         <appender-ref ref="CONSOLE" />
