@@ -29,6 +29,7 @@ public class UserController implements Serializable{
 	
 	@Autowired
 	UserService userService;
+	
     /**
 	 * 示例 ：查询用户列表
 	 * @author fengfeng
