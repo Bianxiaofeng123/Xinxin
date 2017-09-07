@@ -33,5 +33,28 @@ public class class20170906 {
 		double dou3=dou2;
 		String dou4=dou3+"";
 		System.out.println(dou4);
+		
+		//string 转换成int 
+		String str="5";
+		//int 的封装时 Integer 
+		int strint= Integer.parseInt(str);
+		int strint2=strint+1;
+		System.out.println("strint:"+strint2);
+		//double 的封装时 Double 
+		String str2="1.22";
+		double doustr=Double.parseDouble(str2);
+		System.out.println("doustr:"+doustr);
+		
+		//zuoye
+		String guo="7";
+		int guo1=Integer.parseInt(guo);
+		int guo2=guo1+2;
+		System.out.println(guo2);
+		String xin="7.77";
+		double xinxin=Double.parseDouble(xin);
+		System.out.println(xinxin);
+		
+		
+		
 	}
 }
