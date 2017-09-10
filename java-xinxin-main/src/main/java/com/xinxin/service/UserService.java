@@ -16,9 +16,6 @@ public class UserService {
 	UserMapper userMapper;
 	
 	public List<Map<String, Object>> getUserList(Map<String, Object> params) {
-		/*List<Map<String, Object>> userList=new ArrayList<Map<String, Object>>();
-		userList=userMapper.getUserList(params);
-		return userList;*/
 		return userMapper.getUserList(params);
 	}
 }

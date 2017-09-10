@@ -37,7 +37,7 @@ public class UserController implements Serializable{
 	 * @return
 	 * @throws Exception
 	 */
-	@RequestMapping(value = "/list",method=RequestMethod.GET)
+	/*@RequestMapping(value = "/list",method=RequestMethod.GET)
 	public JsonResult getUserList(@RequestParam Map<String, Object> params, Pager pager) throws Exception{
 		log.info("--->>>params:"+params);
 		JsonResult jsonResult = new JsonResult();
@@ -54,6 +54,16 @@ public class UserController implements Serializable{
 		userList=userService.getUserList(params);
 		jsonResult.put(userList);
 		return jsonResult;
-	}
+	}*/
    
+		@RequestMapping(value = "/list",method=RequestMethod.GET)
+		public JsonResult getUserList(@RequestParam Map<String, Object> params, Pager pager) throws Exception{
+			log.info("--->>>params:"+params);
+			JsonResult jsonResult = new JsonResult();
+			//调用service
+			List<Map<String, Object>> userList=new ArrayList<Map<String, Object>>();
+			userList=userService.getUserList(params);
+			jsonResult.put(userList);
+			return jsonResult;
+		}
 }

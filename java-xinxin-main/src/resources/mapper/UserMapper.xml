@@ -3,14 +3,14 @@
 <mapper namespace="com.xinxin.mapper.UserMapper">
 	
 	<select id="getUserList" parameterType="java.util.Map" resultType="java.util.Map">
-		select * from home_user
-		<where>
+		select * from y1ct_bd_user
+		<!-- <where>
 			<if test="id != null and  id != ''">
 				 id=#{id} 
 			</if>
 		</where>
 		<if test="start != null and start != '' and limit != null and limit != ''">
 			limit #{start},#{limit}
-		</if>
+		</if> -->
 	</select>
 </mapper>
