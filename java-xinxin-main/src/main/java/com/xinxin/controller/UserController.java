@@ -28,7 +28,7 @@ public class UserController implements Serializable{
 	MessageSource messageSource; 
 	
 	@Autowired
-	UserService userService;
+	UserService u;
 	
     /** 
 	 * 示例 ：查询用户列表
@@ -62,7 +62,7 @@ public class UserController implements Serializable{
 			JsonResult jsonResult = new JsonResult();
 			//调用service
 			List<Map<String, Object>> userList=new ArrayList<Map<String, Object>>();
-			userList=userService.getUserList(params);
+			userList=u.getUserList(params);
 			jsonResult.put(userList);
 			return jsonResult;
 		}
