@@ -7,3 +7,4 @@ public class class20170823 {
 		System.out.println(string);
 	}
 }
+

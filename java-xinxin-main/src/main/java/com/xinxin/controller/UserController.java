@@ -19,7 +19,7 @@ import com.xinxin.mybatis.utils.Pager;
 import com.xinxin.service.UserService;
 
 @RestController
-@RequestMapping(value = "/usr")
+@RequestMapping(value = "/usr")//这个是主索引  
 public class UserController implements Serializable{
 	//获取打印权限
 	private Logger log = LoggerFactory.getLogger(UserController.class);
@@ -56,12 +56,16 @@ public class UserController implements Serializable{
 		return jsonResult;
 	}*/
    
-		@RequestMapping(value = "/list",method=RequestMethod.GET)
+		@RequestMapping(value = "/list1",method=RequestMethod.GET)// 这个是spring框架的必要索引
 		public JsonResult getUserList(@RequestParam Map<String, Object> params, Pager pager) throws Exception{
+			//日志打印
 			log.info("--->>>params:"+params);
+			//实例化一个 JsonResult 格式的的参数名字叫做 jsonResult
 			JsonResult jsonResult = new JsonResult();
-			//调用service
+			//调用service--调用另外一个盒子
+			//实例化一个 参数类型为 List<Map<String, Object>> 的参数 名字为userList
 			List<Map<String, Object>> userList=new ArrayList<Map<String, Object>>();
+			//接数据 调用另一个盒子 的返回的数据
 			userList=userService.getUserList(params);
 			jsonResult.put(userList);
 			return jsonResult;

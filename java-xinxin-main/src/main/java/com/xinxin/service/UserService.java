@@ -15,7 +15,13 @@ public class UserService {
 	@Autowired
 	UserMapper userMapper;
 	
+	//做业务处理
 	public List<Map<String, Object>> getUserList(Map<String, Object> params) {
-		return userMapper.getUserList(params);
+		//实例化一个 参数类型为 List<Map<String, Object>> 的参数 名字为list
+		List<Map<String, Object>> list=new ArrayList<Map<String, Object>>();
+		//接数据 调用另一个盒子 的返回的数据
+		list=userMapper.getUserList(params);
+		return list;
 	}
+	
 }
