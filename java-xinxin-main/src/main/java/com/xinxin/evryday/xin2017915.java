@@ -11,7 +11,7 @@ public class xin2017915 {
 			System.out.println("我是小欣欣");
 		}else {
 			System.out.print("这是else语句");
-			
+			System.out.print("这是else语句");
 
 		}
 	}
