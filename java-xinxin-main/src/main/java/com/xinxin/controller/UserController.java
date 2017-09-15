@@ -30,18 +30,6 @@ public class UserController implements Serializable{
 	@Autowired
 	UserService u;
 	 
-	@RequestMapping(value = "/list",method=RequestMethod.GET)
-	public JsonResult getUserList(@RequestParam Map<String, Object> params, Pager pager) throws Exception{
-		log.info("--->>>params:"+params);
-		JsonResult jsonResult = new JsonResult();
-		//调用service
-		List<Map<String, Object>> userList=new ArrayList<Map<String, Object>>();
-		userList=u.getUserList(params);
-		jsonResult.put(userList);
-		return jsonResult;
-<<<<<<< HEAD
-	}*/
-   
 		@RequestMapping(value = "/list1",method=RequestMethod.GET)// 这个是spring框架的必要索引
 		public JsonResult getUserList(@RequestParam Map<String, Object> params, Pager pager) throws Exception{
 			//日志打印
@@ -52,11 +40,8 @@ public class UserController implements Serializable{
 			//实例化一个 参数类型为 List<Map<String, Object>> 的参数 名字为userList
 			List<Map<String, Object>> userList=new ArrayList<Map<String, Object>>();
 			//接数据 调用另一个盒子 的返回的数据
-			userList=userService.getUserList(params);
+			userList=u.getUserList(params);
 			jsonResult.put(userList);
 			return jsonResult;
 		}
-=======
 	}
->>>>>>> branch 'master' of https://github.com/Bianxiaofeng123/Xinxin.git
-}

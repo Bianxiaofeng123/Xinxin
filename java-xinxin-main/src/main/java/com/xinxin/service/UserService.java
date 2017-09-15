@@ -17,13 +17,9 @@ public class UserService {
 	
 	//做业务处理
 	public List<Map<String, Object>> getUserList(Map<String, Object> params) {
-<<<<<<< HEAD
 		//实例化一个 参数类型为 List<Map<String, Object>> 的参数 名字为list
-		List<Map<String, Object>> list=new ArrayList<Map<String, Object>>();
 		//接数据 调用另一个盒子 的返回的数据
-=======
 		List<Map<String, Object>> list=new ArrayList<Map<String, Object>>();
->>>>>>> branch 'master' of https://github.com/Bianxiaofeng123/Xinxin.git
 		list=userMapper.getUserList(params);
 		return list;
 	}
