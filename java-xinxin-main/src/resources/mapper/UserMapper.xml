@@ -4,7 +4,15 @@
 	
 	<!-- 组织一个完整的sql -->
 	<select id="getUserList" parameterType="java.util.Map" resultType="java.util.Map">
-		select * from y1ct_bd_user
+		select * from home_user
+	</select>
+	
+	<select id="getUserList2" parameterType="java.util.Map" resultType="java.util.Map">
+		SELECT * FROM home_user where `name` like CONCAT('%',#{name},'%')  
+	</select>
+	
+	<select id="getUserList3" parameterType="java.util.Map" resultType="java.util.Map">
+		SELECT * FROM home_user where `name`= #{name}
 	</select>
 	
 </mapper>
