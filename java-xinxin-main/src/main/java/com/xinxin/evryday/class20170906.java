@@ -49,10 +49,10 @@ public class class20170906 {
 		String guo="7";
 		int guo1=Integer.parseInt(guo);
 		int guo2=guo1+2;
-		System.out.println(guo2);
+		System.out.println("guo:"+guo2);
 		String xin="7.77";
 		double xinxin=Double.parseDouble(xin);
-		System.out.println(xinxin);
+		System.out.println("xinxin:"+xinxin);
 		
 		
 		

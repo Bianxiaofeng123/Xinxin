@@ -44,4 +44,47 @@ public class UserController implements Serializable{
 			jsonResult.put(userList);
 			return jsonResult;
 		}
+		
+		@RequestMapping(value = "/list2",method=RequestMethod.GET)// 这个是spring框架的必要索引
+		public JsonResult getUserList2(@RequestParam Map<String, Object> params, Pager pager) throws Exception{
+			//日志打印
+			log.info("--->>>params:"+params);
+			//实例化一个 JsonResult 格式的的参数名字叫做 jsonResult
+			JsonResult jsonResult = new JsonResult();
+			//调用service--调用另外一个盒子
+			//实例化一个 参数类型为 List<Map<String, Object>> 的参数 名字为userList
+			List<Map<String, Object>> userList=new ArrayList<Map<String, Object>>();
+			//接数据 调用另一个盒子 的返回的数据
+			userList=u.getUserList2(params);
+			jsonResult.put(userList);
+			return jsonResult;
+		}
+		
+		/**
+		 * 主要是针对参数的校验
+		 * 返回格式的处理
+		 * 请求方式的定义
+		 * @param params
+		 * @param pager
+		 * @return
+		 * @throws Exception
+		 */
+		@RequestMapping(value = "/list3",method=RequestMethod.GET)// 这个是spring框架的必要索引
+		public JsonResult getUserList3(@RequestParam Map<String, Object> params, Pager pager) throws Exception{
+			//实例化一个 JsonResult 格式的的参数名字叫做 jsonResult
+			JsonResult jsonResult = new JsonResult();
+			//日志打印
+			log.info("--->>>params:"+params);
+			if (params.get("user") == null) {
+				log.info("用户名为空");
+				return jsonResult;//直接返回数据，不执行以下所有代码
+			}
+			//调用service--调用另外一个盒子
+			//实例化一个 参数类型为 List<Map<String, Object>> 的参数 名字为userList
+			List<Map<String, Object>> userList=new ArrayList<Map<String, Object>>();
+			//接数据 调用另一个盒子 的返回的数据
+			userList=u.getUserList3(params);
+			jsonResult.put(userList);
+			return jsonResult;
+		}
 	}

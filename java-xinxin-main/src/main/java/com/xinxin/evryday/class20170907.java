@@ -5,8 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.xmlbeans.impl.xb.xsdschema.Public;
-
 public class class20170907 {
 		
 		public static void main(String[] args) {
@@ -53,8 +51,8 @@ public class class20170907 {
 			System.out.println(k);
 			
 			Map<String, Object> xiaoxin=new HashMap<String,Object>();
-	        xiaoxin.put("1111", "4444444444444444444444444444444444444444444444");
-	        xiaoxin.put("2222", "55555555555555555555555555555555555555");
+	        xiaoxin.put("1111", "44444444");
+	        xiaoxin.put("2222", "5555555555");
 	        xiaoxin.get("1111");
 	        String string3=xiaoxin.get("1111")+"";
 	        System.out.println(xiaoxin.get("1111"));
