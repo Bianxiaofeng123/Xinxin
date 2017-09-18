@@ -24,6 +24,7 @@ public class UserService {
 		return list;
 	}
 	
+<<<<<<< HEAD
 	public List<Map<String, Object>> getUserList2(Map<String, Object> params) {
 		//实例化一个 参数类型为 List<Map<String, Object>> 的参数 名字为list
 		//接数据 调用另一个盒子 的返回的数据
@@ -39,4 +40,22 @@ public class UserService {
 		list=userMapper.getUserList3(params);
 		return list;
 	}
+=======
+	//需求 是  我调用这个接口的时候，会传一个名为 name 的模糊条件关键字 然后找出与之匹配的用户列表信息
+	public List<Map<String, Object>> getUserList2(Map<String, Object> params) {
+		//实例化一个 参数类型为 List<Map<String, Object>> 的参数 名字为list
+		//接数据 调用另一个盒子 的返回的数据
+		List<Map<String, Object>> list=new ArrayList<Map<String, Object>>();
+		list=userMapper.getUserList2(params);
+		return list;
+	}
+	//小欣欣的接口
+		public List<Map<String, Object>> getUserList3(Map<String, Object> params) {
+			//实例化一个 参数类型为 List<Map<String, Object>> 的参数 名字为list
+			//接数据 调用另一个盒子 的返回的数据
+			List<Map<String, Object>> list=new ArrayList<Map<String, Object>>();
+			list=userMapper.getUserList3(params);
+			return list;
+		}
+>>>>>>> branch 'master' of https://github.com/Bianxiaofeng123/Xinxin.git
 }
