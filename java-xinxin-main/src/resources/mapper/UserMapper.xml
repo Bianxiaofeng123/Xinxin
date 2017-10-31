@@ -15,11 +15,4 @@
 		SELECT * FROM home_user where `name`= #{name}
 	</select>
 	
-	<select id="getUserList2" parameterType="java.util.Map" resultType="java.util.Map">
-		select * from y1ct_bd_user
-	</select>
-	
-	<select id="getUserList3" parameterType="java.util.Map" resultType="java.util.Map">
-		select * from y1da_exam_hosp_depart where pdeptid='7' and status='1'
-	</select>
 </mapper>
