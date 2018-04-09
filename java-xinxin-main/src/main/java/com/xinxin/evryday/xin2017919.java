@@ -1,11 +1,5 @@
 package com.xinxin.evryday;
 
-import javax.websocket.Decoder.Text;
-
-import com.alibaba.druid.sql.visitor.functions.Length;
-
-import junit.framework.Test;
-
 public class xin2017919 {
 	public static void main(String[] args) {
 		System.out.println("访问\"小欣欣\"");
